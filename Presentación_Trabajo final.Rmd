@@ -1,0 +1,44 @@
+---
+title: "Análisis sensorial de distintos estilos de vinos espumantes de Argentina"
+author: "Aníbal Catania"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Datos
+
+```{r}
+library(readr)
+library(tidyverse)
+library(kableExtra)
+data <- read_csv("data.csv")
+```
+
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+kable(table(data$vino, data$panelista), "latex") %>%
+  kable_styling(font_size = 7)
+```
+
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
